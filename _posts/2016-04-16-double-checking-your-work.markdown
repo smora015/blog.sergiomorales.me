@@ -9,7 +9,7 @@ comments:   true
 After going through 3 different phases of my [IAS PCB][ias-pcb], I learned its never a bad thing to double check things...in my case a simple check of temperature limits in  the datasheets for the components I used could have saved me another full revision of my previous layout...I basically couldn't put up with surface mount components so I limited the amount I needed and revised it:
 
 <center>
-   <img src="http://blog.sergiomorales.me/images/ias05.jpg">
+   <img src="http://blog.sergiomorales.me/images/ias05.jpg"> <br>
    Never again, tiny SMD components. Never again...
 </center> <br>
 
@@ -17,7 +17,7 @@ After going through 3 different phases of my [IAS PCB][ias-pcb], I learned its n
 Anyways, I found the problem with my last revision was not the design of my board, but simply my soldering strategy...turns out one been burning out my voltage regulators...can't blame my botchy soldering skills on cheap Chinese parts. What I thought was accidentally shorting of smd components and wires was actually just me being silly and burning out the regulator from too high temperatures. Keeping my iron at 300 C is not a good idea apparently...at least for the components I'm using. I never thought soldering for such a small amount of time would burn out components. Busting out my multimeter proved it burned. Anyways, the new revision of my board is better ish. Don't know if the extra 40 bucks I had to shell out to [OSHPark][oshpark] could make another 3 batches is worth it though.
 
 <center>
-   <img src="http://blog.sergiomorales.me/images/ias06.jpg">
+   <img src="http://blog.sergiomorales.me/images/ias06.jpg"> <br>
    Much better.
 </center> <br>
 
