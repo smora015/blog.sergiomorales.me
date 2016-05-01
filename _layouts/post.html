@@ -12,4 +12,5 @@ layout: default
     {{ content }}
   </div>
 
+  {% include disqus.html disqus_id='page.date | date: "%b %-d, %Y"' disqus_title=page.title%}
 </article>

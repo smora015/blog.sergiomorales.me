@@ -1,15 +1,9 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Sergio's Stream of Consciousness - A work in progress.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I'm just a young Algorithm/Software Engineer. I post articles and rant about the struggles I go through in the Software industry on a daily basis, mostly so I can come back here and remind myself not to make the same mistakes twice. You can find my main site at [sergiomorales.me](http://sergiomorales.me/). There you can find more ways to reach me directly, and find out my latest side projects. Feel free to contact me about whatever, I'm always open to networking with other like-minded individuals.
