@@ -1,9 +1,12 @@
 ---
-layout:     post
-title:      "Double Checking Your Work is Not Enough, Seriously"
-date:       2016-04-16 12:00:00 -0400
-categories: electronics engineering
-comments:   true
+layout:   post
+title:    "Double Checking Your Work is Not Enough, Seriously"
+date:     2016-04-16 12:00:00 -0400
+tags: 
+          - electronics 
+          - engineering
+comments: true
+summary:  Don't learn the hard way.
 ---
 
 After going through 3 different phases of my [IAS PCB][ias-pcb], I learned its never a bad thing to double check things...in my case a simple check of temperature limits in  the datasheets for the components I used could have saved me another full revision of my previous layout...I basically couldn't put up with surface mount components so I limited the amount I needed and revised it:

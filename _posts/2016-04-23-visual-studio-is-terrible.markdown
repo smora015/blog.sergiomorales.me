@@ -1,9 +1,11 @@
 ---
-layout:     post
-title:      "Visual Studio 2015 Installer is Terrible"
-date:       2016-04-23 12:00:00 -0400
-categories: software
-comments:   true
+layout:   post
+title:    "Visual Studio 2015 Installer is Terrible"
+date:     2016-04-23 12:00:00 -0400
+tags: 
+          - software
+comments: true
+summary:  My struggle with Visual Studio on Windows 10.
 ---
 
 So, I finally decided to try out __Unity 3D__. I finally went out and bought a book for myself, because I honestly don't like to sit through crappy YouTube videos or stare at a screen to read for hours. I ended up getting __Joe Hocking__'s book, [Unity in Action: Multiplatform Game Development in C# with Unity 5][unity-book], and wow, I'm amazed out how quick it is to develop something from scratch. Before I start talking about my progress in the world of crossplatform game development, I'd just like to rant about the week long struggle I went through just install the damn thing for C# scripting.

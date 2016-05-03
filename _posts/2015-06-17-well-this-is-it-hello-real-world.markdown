@@ -1,9 +1,10 @@
 ---
-layout:     post
-title:      "Well, This is It! Hello, Real World"
-date:       2015-06-17 12:33:31 -0400
-categories: life
-comments:   true
+layout:   post
+title:    "Well, This is It! Hello, Real World"
+date:     2015-06-17 12:33:31 -0400
+tags:     life
+comments: true
+summary:  Goodbye, undergrad!
 ---
 
 <center>
