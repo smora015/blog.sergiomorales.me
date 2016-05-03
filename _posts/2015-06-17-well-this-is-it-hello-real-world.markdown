@@ -2,7 +2,10 @@
 layout:   post
 title:    "Well, This is It! Hello, Real World"
 date:     2015-06-17 12:33:31 -0400
-tags:     life
+tags:     
+          - life
+          - education
+          - industry
 comments: true
 summary:  Goodbye, undergrad!
 ---

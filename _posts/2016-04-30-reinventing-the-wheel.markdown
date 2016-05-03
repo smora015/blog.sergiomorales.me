@@ -3,8 +3,8 @@ layout:   post
 title:    "On Reinventing The Wheel: My Naivete"
 date:      2016-04-30 12:00:00 -0400
 tags: 
-          - life 
           - engineering
+          - software
 comments: true
 summary:  Utilize work that's already been done!
 ---

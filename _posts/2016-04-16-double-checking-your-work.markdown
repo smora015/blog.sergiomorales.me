@@ -5,6 +5,7 @@ date:     2016-04-16 12:00:00 -0400
 tags: 
           - electronics 
           - engineering
+          - software
 comments: true
 summary:  Don't learn the hard way.
 ---

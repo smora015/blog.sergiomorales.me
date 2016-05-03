@@ -3,7 +3,8 @@ layout:   post
 title:    "Visual Studio 2015 Installer is Terrible"
 date:     2016-04-23 12:00:00 -0400
 tags: 
-          - software
+          - programs
+          - tools
 comments: true
 summary:  My struggle with Visual Studio on Windows 10.
 ---
