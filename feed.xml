@@ -1,30 +1,131 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Sergio Morales - Blog</title>
+    <description>Sergio&#39;s stream of consciousness- my ramblings, thoughts, and ideas.
+</description>
+    <link>http://blog.sergiomorales.me/</link>
+    <atom:link href="http://blog.sergiomorales.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 02 May 2016 22:50:51 -0400</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 22:50:51 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>On Reinventing The Wheel: My Naivete</title>
+        <description>&lt;p&gt;I used to be the type that would like to build things from the ground up. I’ve since moved away from doing that…heres why. Although I’ve always been an advocate for learning the lower level intricacies of things, there comes a point where it slows you down from developing work- and that’s where you should stop and reevaluate what your end goal really is, and if it’s even reachable. This happened a billion times with me. Just setting this site up is the best example. I lost track of what I wanted to accomplish here, which is a simple blog and showcase for my work. I ended up spending dozens and dozens of hours learning primitive steps to getting a web server up and properly making sure the client gets what I post…had I just set up a WordPress blog, this would have saved time. Sure I did learn something, but I have better things to learn…especially if I know I won’t apply this to other things. I won’t see myself as a sys admin, not now, not ever. I’d rather spend this learning time on getting decent progress on my other projects…so, lesson learned. Just to give you an idea of the struggle I’ve went through with building this site: I’ve messed around with Namecheap for DNS resgitrations, Github for static site hosting, &lt;a href=&quot;http://aws.amazon.com/&quot;&gt;Amazon’s AWS&lt;/a&gt; with a full on LAMP stack (Linux, Apache for the webserver, MySQL for future database usage, and PHP for server side scripting), and many, &lt;em&gt;many&lt;/em&gt; other things. I ended up realizing I don’t need to put up with all of this crap, I just want an easy to manage blog and professional portfolio of my work…so I found the perfect combination of Namecheap, &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, and Github.&lt;/p&gt;
+
+&lt;p&gt;To add on, I will say that learning the lower level schema of &lt;em&gt;anything&lt;/em&gt; can be beneficial if you know that having such a deeper understanding will allow you to become a better worker in that field. Looking at you, C language. A perfect example of this for me is my &lt;a href=&quot;http://sergiomorales.me/ias.html&quot;&gt;Integrated Appliance System&lt;/a&gt;. I’ve probably spent over 50 hours working on this on the side, but I’ve learned things I wouldn’t have had I not learned to build a PCB from the ground up, or integrated the dozens of ICs with my microcontrollers instead of just using an Arduino or Raspberry Pi. But that’s just me.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 30 Apr 2016 12:00:00 -0400</pubDate>
+        <link>http://blog.sergiomorales.me/2016/04/30/reinventing-the-wheel.html</link>
+        <guid isPermaLink="true">http://blog.sergiomorales.me/2016/04/30/reinventing-the-wheel.html</guid>
+        
+        <category>engineering</category>
+        
+        <category>software</category>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Visual Studio 2015 Installer is Terrible</title>
+        <description>&lt;p&gt;So, I finally decided to try out &lt;strong&gt;Unity 3D&lt;/strong&gt;. I finally went out and bought a book for myself, because I honestly don’t like to sit through crappy YouTube videos or stare at a screen to read for hours. I ended up getting &lt;strong&gt;Joe Hocking&lt;/strong&gt;’s book, &lt;a href=&quot;http://www.amazon.com/Unity-Action-Multiplatform-Game-Development/dp/161729232X?ie=UTF8&amp;amp;psc=1&amp;amp;redirect=true&amp;amp;ref_=oh_aui_detailpage_o06_s00&quot;&gt;Unity in Action: Multiplatform Game Development in C# with Unity 5&lt;/a&gt;, and wow, I’m amazed out how quick it is to develop something from scratch. Before I start talking about my progress in the world of crossplatform game development, I’d just like to rant about the week long struggle I went through just install the damn thing for C# scripting.&lt;/p&gt;
+
+&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/vs-error.PNG&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For anyone wondering what this even means, I’ll save you the trouble of having to run around only to have Microsoft act like you’re an idiot and think you just downloaded a corrupted installer and having to compare checksums. This &lt;a href=&quot;http://stackoverflow.com/questions/34889317/error-installing-visual-studio-2015-enterprise-update-1-with-team-explorer&quot;&gt;Stack Overflow&lt;/a&gt; post will save you the trouble.&lt;/p&gt;
+
+&lt;p&gt;First off, if you get the steam explorer error, this is from the depencies it needs, which leads to NuGet package installer failing due to your system having an outdated copy of some system library. Save the crap, just install an older version…at the time of this post, the VS RTS version should do the trick. There should be a link to it in the stack overflow post above. Just for reference, you can inspect all of the files in case your problem is unrelated:&lt;/p&gt;
+
+&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/vs-error-logs.PNG&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the perpetrator. I found the error by trying to workaround the issue and installing a standalone version of the NuGet Package manager, but to no avail:&lt;/p&gt;
+
+&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/vs-error-nuget.PNG&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anywho, just do what the post says. Sometimes its better to start everything from scratch than to spend hours like me trying to figure it out. But that’s just me. I just hate error logs that don’t give you a proper indication of what exactly is freaking failing. Good job VS team.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 23 Apr 2016 12:00:00 -0400</pubDate>
+        <link>http://blog.sergiomorales.me/2016/04/23/visual-studio-is-terrible.html</link>
+        <guid isPermaLink="true">http://blog.sergiomorales.me/2016/04/23/visual-studio-is-terrible.html</guid>
+        
+        <category>programs</category>
+        
+        <category>tools</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Double Checking Your Work is Not Enough, Seriously</title>
+        <description>&lt;p&gt;After going through 3 different phases of my &lt;a href=&quot;http://sergiomorales.me/ias.html&quot;&gt;IAS PCB&lt;/a&gt;, I learned its never a bad thing to double check things…in my case a simple check of temperature limits in  the datasheets for the components I used could have saved me another full revision of my previous layout…I basically couldn’t put up with surface mount components so I limited the amount I needed and revised it:&lt;/p&gt;
+
+&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/ias05.jpg&quot; /&gt; &lt;br /&gt;
+   Never again, tiny SMD components. Never again...
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyways, I found the problem with my last revision was not the design of my board, but simply my soldering strategy…turns out one been burning out my voltage regulators…can’t blame my botchy soldering skills on cheap Chinese parts. What I thought was accidentally shorting of smd components and wires was actually just me being silly and burning out the regulator from too high temperatures. Keeping my iron at 300 C is not a good idea apparently…at least for the components I’m using. I never thought soldering for such a small amount of time would burn out components. Busting out my multimeter proved it burned. Anyways, the new revision of my board is better ish. Don’t know if the extra 40 bucks I had to shell out to &lt;a href=&quot;https://oshpark.com/&quot;&gt;OSHPark&lt;/a&gt; could make another 3 batches is worth it though.&lt;/p&gt;
+
+&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/ias06.jpg&quot; /&gt; &lt;br /&gt;
+   Much better.
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;So back to the point. This all applies to the real world too. I’ve been working in the industry for less than a year, so this may be obvious to &lt;em&gt;most&lt;/em&gt;, but its still good to explictly say it. I catch small mistakes &lt;em&gt;all&lt;/em&gt; the time. So make sure to not only triple or quadruple check your work, but to get a fresh pair of eyes to see your work, you never know if they may catch mistakes that you overlooked. Now to finally solder this baby completely and move on to re-coding the mess of the state machines I had done for the breadboard prototype version…fun…&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 16 Apr 2016 12:00:00 -0400</pubDate>
+        <link>http://blog.sergiomorales.me/2016/04/16/double-checking-your-work.html</link>
+        <guid isPermaLink="true">http://blog.sergiomorales.me/2016/04/16/double-checking-your-work.html</guid>
+        
+        <category>electronics</category>
+        
+        <category>engineering</category>
+        
+        <category>software</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Well, This is It! Hello, Real World</title>
+        <description>&lt;center&gt;
+   &lt;img src=&quot;http://blog.sergiomorales.me/images/bourns.jpg&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;So, I’ve finally graduated from college. This Monday, I had the honor to walk amongst the many friends, family, and truly inspiring individuals that I have had the pleasure of meeting. Some of these people I’ve met over the past four years, and some that I have known since I can remember. I came in as a young, naive seventeen-year-old &lt;em&gt;kid&lt;/em&gt; who had no idea what was to come of me within the span of my time at UC Riverside. I now come out knowing a lot more about myself. I’ve matured here, no lie. So, as my first blog post, I’d like to take my time and reflect on my time spent as an undergaduate student.&lt;/p&gt;
+
+&lt;p&gt;First off, I can’t stress enough just how much more you get out of college by becoming involved. I can honestly say that when comparing my first year to my second and beyond, the reason I improved in every possible way was because I broke out of my shell and started to become involved in things outside of academia. Joining the &lt;a href=&quot;http://shpe.engr.ucr.edu/&quot;&gt;Society of Hispanic Professional Engineers&lt;/a&gt; at UCR was one of the best investments of my time I could have made. Despite the fact that I faced very troubling issues in my personal life during this time, I somehow managed to preservere and worked well under the stress of a million things going on at once. I think the most important thing I learned is that, everyone has their own system when it comes to success. Sure, you can fetch tons of advice from mentors, motivational speakers, etc. But when it all boils down to what you do, you come to face the fact that not everything works as well as it does with others. So I went out, experimented with time management techniques, and found my own way of managing my life. Dozens of sticky notes on my desk didn’t work out for me, but it might for you.&lt;/p&gt;
+
+&lt;p&gt;I could go on and on, but I won’t. What I will say is, its never good to go through the path of college alone. I had the amazing luck of finding my girlfriend, who has and still is, extremely supportive of me, as I am with her. Not to mention my parents, who are the sole reason for why I was even able to get to college. So yeah. Here’s to everyone who has been suppportive of me throughout my time as an undergrad. I really can’t believe how fast fours years have gone by. Now I’m heading out, with a B.S in Computer Engineering, ready to head out to Michigan to work for General Motors! I promise to everyone who has supported me, that I won’t disappoint them. Cheers.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 Jun 2015 12:33:31 -0400</pubDate>
+        <link>http://blog.sergiomorales.me/2015/06/17/well-this-is-it-hello-real-world.html</link>
+        <guid isPermaLink="true">http://blog.sergiomorales.me/2015/06/17/well-this-is-it-hello-real-world.html</guid>
+        
+        <category>life</category>
+        
+        <category>education</category>
+        
+        <category>industry</category>
+        
+        
+      </item>
+    
   </channel>
 </rss>

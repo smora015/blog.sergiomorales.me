@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sergio Morales - Blog</title>
-  <meta name="description" content="Sergio's stream of consciousness- my ramblings, thoughts, and ideas.
-">
+  <title>Visual Studio 2015 Installer is Terrible</title>
+  <meta name="description" content="So, I finally decided to try out Unity 3D. I finally went out and bought a book for myself, because I honestly don’t like to sit through crappy YouTube video...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://blog.sergiomorales.me/">
+  <link rel="canonical" href="http://blog.sergiomorales.me/2016/04/23/visual-studio-is-terrible.html">
   <link rel="alternate" type="application/rss+xml" title="Sergio Morales - Blog" href="http://blog.sergiomorales.me/feed.xml">
 </head>
 
@@ -71,65 +70,81 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Visual Studio 2015 Installer is Terrible</h1>
+    <p class="post-meta"><time datetime="2016-04-23T12:00:00-04:00" itemprop="datePublished">Apr 23, 2016</time> |
+    <span class="post-meta"> 
+       
+         <a class="tag_list_link" href="/tag/programs">programs</a>, 
+       
+         <a class="tag_list_link" href="/tag/tools">tools</a> 
+       
+    </span></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <a class="post-link" href="/2016/04/30/reinventing-the-wheel.html">On Reinventing The Wheel: My Naivete</a>
-        <span class="post-meta">Apr 30, 2016 | 
-            
-               <a class="tag_list_link" href="/tag/engineering">engineering</a>, 
-            
-               <a class="tag_list_link" href="/tag/software">software</a> 
-            
-        </span>
-      </li>
-    
-      <li>
-        <a class="post-link" href="/2016/04/23/visual-studio-is-terrible.html">Visual Studio 2015 Installer is Terrible</a>
-        <span class="post-meta">Apr 23, 2016 | 
-            
-               <a class="tag_list_link" href="/tag/programs">programs</a>, 
-            
-               <a class="tag_list_link" href="/tag/tools">tools</a> 
-            
-        </span>
-      </li>
-    
-      <li>
-        <a class="post-link" href="/2016/04/16/double-checking-your-work.html">Double Checking Your Work is Not Enough, Seriously</a>
-        <span class="post-meta">Apr 16, 2016 | 
-            
-               <a class="tag_list_link" href="/tag/electronics">electronics</a>, 
-            
-               <a class="tag_list_link" href="/tag/engineering">engineering</a>, 
-            
-               <a class="tag_list_link" href="/tag/software">software</a> 
-            
-        </span>
-      </li>
-    
-      <li>
-        <a class="post-link" href="/2015/06/17/well-this-is-it-hello-real-world.html">Well, This is It! Hello, Real World</a>
-        <span class="post-meta">Jun 17, 2015 | 
-            
-               <a class="tag_list_link" href="/tag/life">life</a>, 
-            
-               <a class="tag_list_link" href="/tag/education">education</a>, 
-            
-               <a class="tag_list_link" href="/tag/industry">industry</a> 
-            
-        </span>
-      </li>
-    
-  </ul>
+  <div class="post-content" itemprop="articleBody">
+    <p>So, I finally decided to try out <strong>Unity 3D</strong>. I finally went out and bought a book for myself, because I honestly don’t like to sit through crappy YouTube videos or stare at a screen to read for hours. I ended up getting <strong>Joe Hocking</strong>’s book, <a href="http://www.amazon.com/Unity-Action-Multiplatform-Game-Development/dp/161729232X?ie=UTF8&amp;psc=1&amp;redirect=true&amp;ref_=oh_aui_detailpage_o06_s00">Unity in Action: Multiplatform Game Development in C# with Unity 5</a>, and wow, I’m amazed out how quick it is to develop something from scratch. Before I start talking about my progress in the world of crossplatform game development, I’d just like to rant about the week long struggle I went through just install the damn thing for C# scripting.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<center>
+   <img src="http://blog.sergiomorales.me/images/vs-error.PNG" />
+</center>
+<p><br /></p>
 
-</div>
+<p>For anyone wondering what this even means, I’ll save you the trouble of having to run around only to have Microsoft act like you’re an idiot and think you just downloaded a corrupted installer and having to compare checksums. This <a href="http://stackoverflow.com/questions/34889317/error-installing-visual-studio-2015-enterprise-update-1-with-team-explorer">Stack Overflow</a> post will save you the trouble.</p>
+
+<p>First off, if you get the steam explorer error, this is from the depencies it needs, which leads to NuGet package installer failing due to your system having an outdated copy of some system library. Save the crap, just install an older version…at the time of this post, the VS RTS version should do the trick. There should be a link to it in the stack overflow post above. Just for reference, you can inspect all of the files in case your problem is unrelated:</p>
+
+<center>
+   <img src="http://blog.sergiomorales.me/images/vs-error-logs.PNG" />
+</center>
+<p><br /></p>
+
+<p>This is the perpetrator. I found the error by trying to workaround the issue and installing a standalone version of the NuGet Package manager, but to no avail:</p>
+
+<center>
+   <img src="http://blog.sergiomorales.me/images/vs-error-nuget.PNG" />
+</center>
+<p><br /></p>
+
+<p>Anywho, just do what the post says. Sometimes its better to start everything from scratch than to spend hours like me trying to figure it out. But that’s just me. I just hate error logs that don’t give you a proper indication of what exactly is freaking failing. Good job VS team.</p>
+
+
+  </div>
+
+  <div class="PageNavigation">
+     
+       <br> <center> <strong> More entries: </strong> </center>
+     
+     
+     
+       <a class="prev" href="/2016/04/16/double-checking-your-work.html">&laquo; Double Checking Your Work is Not Enough, Seriously</a>
+     
+     
+     
+       <a class="next" href="/2016/04/30/reinventing-the-wheel.html">On Reinventing The Wheel: My Naivete &raquo;</a>
+     
+  </div>
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'smoras';
+    var disqus_identifier = 'Visual Studio 2015 Installer is Terrible';
+    var disqus_title = 'Visual Studio 2015 Installer is Terrible';
+    var disqus_url = 'http://blog.sergiomorales.me/2016/04/23/visual-studio-is-terrible.html';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>  
+
+</article>
 
       </div>
     </div>
