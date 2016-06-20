@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Double Checking Your Work is Not Enough, Seriously</title>
-  <meta name="description" content="After going through 3 different phases of my IAS PCB, I learned its never a bad thing to double check things…in my case a simple check of temperature limits ...">
+  <title>Hardwiring a Dashcam in a Vehicle</title>
+  <meta name="description" content="A few weeks ago, I purchased a dashcam, because why not? Driving more frequently, I thought I’dget something to be able to record my commute in the event whe...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://blog.sergiomorales.me/2016/04/16/double-checking-your-work.html">
+  <link rel="canonical" href="http://blog.sergiomorales.me/2016/06/19/hardwiring-a-dashcam.html">
   <link rel="alternate" type="application/rss+xml" title="Sergio Morales - Blog" href="http://blog.sergiomorales.me/feed.xml">
 </head>
 
@@ -75,37 +75,81 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Double Checking Your Work is Not Enough, Seriously</h1>
-    <p class="post-meta"><time datetime="2016-04-16T12:00:00-04:00" itemprop="datePublished">Apr 16, 2016</time> |
+    <h1 class="post-title" itemprop="name headline">Hardwiring a Dashcam in a Vehicle</h1>
+    <p class="post-meta"><time datetime="2016-06-19T15:11:00-04:00" itemprop="datePublished">Jun 19, 2016</time> |
     <span class="post-meta"> 
        
-         <a class="tag_list_link" href="/tag/electronics">electronics</a>, 
+         <a class="tag_list_link" href="/tag/projects">projects</a>, 
        
-         <a class="tag_list_link" href="/tag/engineering">engineering</a>, 
-       
-         <a class="tag_list_link" href="/tag/software">software</a> 
+         <a class="tag_list_link" href="/tag/electronics">electronics</a> 
        
     </span></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>After going through 3 different phases of my <a href="http://sergiomorales.me/ias.html">IAS PCB</a>, I learned its never a bad thing to double check things…in my case a simple check of temperature limits in  the datasheets for the components I used could have saved me another full revision of my previous layout…I basically couldn’t put up with surface mount components so I limited the amount I needed and revised it:</p>
+    <p>A few weeks ago, I purchased a dashcam, because why not? Driving more frequently, I thought I’d
+get something to be able to record my commute in the event where I’m involved in an accident. And with
+the amount of bad drivers in Michigan I’m surprised I haven’t done this earlier…anyways, I got tired
+of having to use my cigarette lighter to power it on, as my vehicle’s socket is always on, requiring me
+to have to disconnect and reconnect the cable every darn time. Instead, I decided to tinker with the available
+fuses in my car’s instrumentation panel, to tap into a circuit that is only enabled upon ignition, or when
+the engine is on.</p>
+
+<h2 id="step-1---whats-needed">Step 1 - What’s Needed</h2>
 
 <center>
-   <img src="http://blog.sergiomorales.me/images/ias05.jpg" /> <br />
-   Never again, tiny SMD components. Never again...
+   <img src="http://blog.sergiomorales.me/images/dashcam-materials.jpg" />
 </center>
-<p><br /></p>
 
-<p>Anyways, I found the problem with my last revision was not the design of my board, but simply my soldering strategy…turns out one been burning out my voltage regulators…can’t blame my botchy soldering skills on cheap Chinese parts. What I thought was accidentally shorting of smd components and wires was actually just me being silly and burning out the regulator from too high temperatures. Keeping my iron at 300 C is not a good idea apparently…at least for the components I’m using. I never thought soldering for such a small amount of time would burn out components. Busting out my multimeter proved it burned. Anyways, the new revision of my board is better ish. Don’t know if the extra 40 bucks I had to shell out to <a href="https://oshpark.com/">OSHPark</a> could make another 3 batches is worth it though.</p>
+<ul>
+  <li>I will be using a moderately priced dashcam, the <a href="https://www.amazon.com/Rexing-Dashboard-Recorder-G-Sensor-Recording/dp/B00X528FNE/ref=sr_1_1?ie=UTF8&amp;qid=1466388408&amp;sr=8-1&amp;keywords=rexing">Rexing V1</a>.</li>
+  <li>An Add-A-Circuit, to piggy back our circuit from an existing socket in the fuse box. This is a clean way of 
+hardwiring, rather than just adding a wire into a fuse- a much messier and less safe approach.</li>
+  <li>A fuse, with appropriate amperage rating. 2-3 amps should do the trick. I</li>
+  <li>Some method of stepping down the ~12 volts from the power to the appropriate rating on your dashcam. For mine,
+I needed 5V. I had some voltage regulators laying around so I used that, along with the mini USB cable
+that was included with my dashcam, which will require a modification.</li>
+</ul>
+
+<p>This should cost you less than $10, save the cost of the dashcam itself.</p>
+
+<h2 id="step-2---wiring-the-circuit">Step 2 - Wiring the Circuit</h2>
+
+<p>My power cable was not detachable from the cigarette lighter connector, so I snipped it off, as I wouldn’t need it
+from now on. To be safe, I made sure 5 volts is what I truly needed, so I measured the output of the connector
+when plugged in– and to confirm which wire was power and ground:</p>
 
 <center>
-   <img src="http://blog.sergiomorales.me/images/ias06.jpg" /> <br />
-   Much better.
+   <img src="http://blog.sergiomorales.me/images/dashcam-measure.jpg" />
 </center>
-<p><br /></p>
 
-<p>So back to the point. This all applies to the real world too. I’ve been working in the industry for less than a year, so this may be obvious to <em>most</em>, but its still good to explictly say it. I catch small mistakes <em>all</em> the time. So make sure to not only triple or quadruple check your work, but to get a fresh pair of eyes to see your work, you never know if they may catch mistakes that you overlooked. Now to finally solder this baby completely and move on to re-coding the mess of the state machines I had done for the breadboard prototype version…fun…</p>
+<p>5.5 volts, good enough. For my voltage step-down circuit I will be using the L7805CV, a very common 5V voltage regulator:</p>
+
+<center>
+   <img src="http://blog.sergiomorales.me/images/L7805.jpg" />
+</center>
+
+<p>Basically, I set up the wires so that the cable running from the Add-A-Circuit goes to the input to the L7805CV. Ground pin will
+go to both the negative pin of the USB cable (black), and to the bare metal chassis of my car. The last pin is the regulated 5 volt
+output, which goes to the power pin of the USB cable. I also threw in a 10 uF capacitor to stabilize the input to the regulator by connecting 
+it to the input and ground pin. This required a bit of soldering and taping.</p>
+
+<h2 id="step-3---connecting-the-circuit">Step 3 - Connecting the Circuit</h2>
+
+<p>Next step would be finding a good fuse to piggy back your circuit off of. What you do is you first bust out your multimeter, and look for points
+that are only on when your engine is running or is keyed-on. You can confirm this by measuring for voltage when the car is off, and when the car is on.
+Also important to note is that you need to find what side of the fuse is being supplied power to– which again is found easily by measure both sides and
+confirming there is voltage.</p>
+
+<p>Once this is done, remove the original fuse and attach it to the bottom slot of the Add-A-Circuit. The top slot is where the new fuse goes. Then attach it, and
+voila! Ready to test.</p>
+
+<center>
+   <img src="http://blog.sergiomorales.me/images/dashcam-test.jpg" />
+</center>
+
+<p>Don’t worry, I cleaned it up a bit after that image…this allows me to better hide the cables and avoid manually plugging and unplugging it! More details about how I wired
+everything will be added soon.</p>
 
 
   </div>
@@ -116,11 +160,9 @@
      
      
      
-       <a class="prev" href="/2015/06/17/well-this-is-it-hello-real-world.html">&laquo; Well, This is It! Hello, Real World</a>
+       <a class="prev" href="/2016/04/30/reinventing-the-wheel.html">&laquo; On Reinventing The Wheel: My Naivete</a>
      
      
-     
-       <a class="next" href="/2016/04/23/visual-studio-is-terrible.html">Visual Studio 2015 Installer is Terrible &raquo;</a>
      
   </div>
 
@@ -128,9 +170,9 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'smoras';
-    var disqus_identifier = 'Double Checking Your Work is Not Enough, Seriously';
-    var disqus_title = 'Double Checking Your Work is Not Enough, Seriously';
-    var disqus_url = 'http://blog.sergiomorales.me/2016/04/16/double-checking-your-work.html';
+    var disqus_identifier = 'Hardwiring a Dashcam in a Vehicle';
+    var disqus_title = 'Hardwiring a Dashcam in a Vehicle';
+    var disqus_url = 'http://blog.sergiomorales.me/2016/06/19/hardwiring-a-dashcam.html';
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
