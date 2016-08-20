@@ -29,7 +29,7 @@ Step 1 - What's Needed
 - I will be using a moderately priced dashcam, the [Rexing V1][DASHCAM].
 - An Add-A-Circuit, to piggy back our circuit from an existing socket in the fuse box. This is a clean way of 
 hardwiring, rather than just adding a wire into a fuse- a much messier and less safe approach.
-- A fuse, with appropriate amperage rating. 2-3 amps should do the trick. I 
+- A fuse, with appropriate amperage rating. 2-3 amps should do the trick. 
 - Some method of stepping down the ~12 volts from the power to the appropriate rating on your dashcam. For mine,
   I needed 5V. I had some voltage regulators laying around so I used that, along with the mini USB cable
   that was included with my dashcam, which will require a modification. 
